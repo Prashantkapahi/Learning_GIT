@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "source": "CMS",
+    "record_count": 2,
+    "upload_date": "2024-01-15"
+  },
+  "records": [
+    {
+      "member_id": "M001",
+      "plan_type": "PPO",
+      "enrollment_date": "2024-01-01",
+      "status": "active"
+    },
+    {
+      "member_id": "M002",
+      "plan_type": "HMO",
+      "enrollment_date": "2024-01-05",
+      "status": "active"
+    }
+  ]
+}

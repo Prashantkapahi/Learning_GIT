@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "source": "Reddit",
+    "record_count": 2,
+    "collection_date": "2024-01-10"
+  },
+  "records": [
+    {
+      "post_id": "P001",
+      "thread": "healthcare pricing",
+      "sentiment": "negative",
+      "score": -0.85
+    },
+    {
+      "post_id": "P002",
+      "thread": "insurance coverage",
+      "sentiment": "positive",
+      "score": 0.72
+    }
+  ]
+}
