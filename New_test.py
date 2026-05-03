@@ -1,9 +1,11 @@
 import os
+import traceback
 from dotenv import load_dotenv
 import google.generativeai as genai
 
 # Load from specific .env path
-load_dotenv("c:\\Users\\Prashant Kapahi\\Healthcare_Payer_App\\.env")
+dotenv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.env')
+load_dotenv(dotenv_path)
 
 def main():
     api_key = os.getenv("GEMINI_API_KEY")
@@ -22,8 +24,9 @@ def main():
         print("\nAvailable models:")
         models_list = []
         for model in genai.list_models():
-            print(f"  - {model.name}")
-            models_list.append(model.name)
+            if 'generateContent' in model.supported_generation_methods:
+                print(f"  - {model.name}")
+                models_list.append(model.name)
         
         # Use the latest model
         model_name = "models/gemini-1.5-flash"
@@ -37,7 +40,6 @@ def main():
     except Exception as e:
         print(f"\n[ERROR] Error: {type(e).__name__}")
         print(f"Message: {str(e)}")
-        import traceback
         traceback.print_exc()
 
 if __name__ == "__main__":
